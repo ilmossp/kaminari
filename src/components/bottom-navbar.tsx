@@ -8,8 +8,8 @@ const history=(<path xmlns="http://www.w3.org/2000/svg" d="M12 21q-3.45 0-6.012-
 
 function BottomNavbar() {
   return (
-    <div className="flex bg-darkBlueGray w-80  py-2 items-center h-16 justify-between rounded-md mx-auto px-4 ">
-      <Tab routeName="library" selected={true} path={library}/>
+    <div className="flex bg-darkBlueGray w-10/12  items-center h-16 justify-between rounded-md  px-4 fixed bottom-5 left-1/2 -translate-x-1/2">
+      <Tab routeName={"library"} selected={true} path={library}/>
       <Tab routeName={"explore"} selected={false} path={explore}/>
       <Tab routeName={"history"} selected={false} path={history}/>      
     </div>

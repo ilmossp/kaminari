@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      
+      fontFamily:{
+        'sans': ['"Lexend Deca"']
+      },
+      
       borderRadius: {
         md: "12px"
       },

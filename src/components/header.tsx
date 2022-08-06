@@ -7,7 +7,7 @@ type headerProps = {
 
 function Header({ routeName }: headerProps) {
   return (
-    <div className="flex justify-between w-11/12 mb-8  items-center mt-8">
+    <div className="flex justify-between w-11/12 items-center fixed top-3 left-1/2 -translate-x-1/2 ">
       <h1 className="text-coolGray text-2xl ">{routeName}</h1>
       <svg
         className="fill-coolGray"

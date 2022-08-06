@@ -8,12 +8,12 @@ type LayoutProps={child:JSX.Element,routeName:string}
 
 function Layout({child,routeName}:LayoutProps) {
   return (
-    <>
+    <div className="w-full relative">
       <Header routeName={routeName} />
       <SearchBar />
       <main>{child}</main>
       <BottomNavbar />
-    </>
+    </div>
   );
 }
 

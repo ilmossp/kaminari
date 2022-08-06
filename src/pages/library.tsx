@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 
 function Library() {
   return (
-    <div className="w-full h-screen  relative flex items-center flex-col font-sans ">
+    <div className="w-full relative flex justify-center items-center flex-col  font-sans ">
       
         <h1 className="text-cool-gray text-xl">Nothing to see here</h1>
 

@@ -1,17 +1,15 @@
-import { executionAsyncId } from "async_hooks";
-import React from "react";
 
 type headerProps = {
-  routeName: string;
+  title: string;
 };
 
-function Header({ routeName }: headerProps) {
+function Header({ title }: headerProps) {
   return (
-    <div className="flex justify-between w-11/12 items-center mb-5 fixed top-8 left-1/2 -translate-x-1/2">
-      <h1 className="text-coolGray text-2xl ">{routeName}</h1>
+    <div className="flex justify-between bg-blue-gray items-center mb-5 sticky top-0 p-4 z-10">
+      <h1 className="text-cool-gray text-2xl ">{title}</h1>
       <div className="flex items-center gap-2">
         <svg
-          className="fill-coolGray"
+          className="fill-cool-gray"
           xmlns="http://www.w3.org/2000/svg"
           height="24"
           width="24"
@@ -23,7 +21,7 @@ function Header({ routeName }: headerProps) {
           />
         </svg>
         <svg
-          className="fill-coolGray"
+          className="fill-cool-gray"
           xmlns="http://www.w3.org/2000/svg"
           height="24"
           width="24"

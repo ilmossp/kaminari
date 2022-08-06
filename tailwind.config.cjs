@@ -12,11 +12,10 @@ module.exports = {
         md: "12px"
       },
       colors:{
-        darkBlueGray : "#1E293B",
-        blueGray: "#334155",
-        coolGray: "#CBD5E1",
-        trueGray: '#808080'
-          
+        'dark-blue-gray' : "#1E293B",
+        'blue-gray': "#334155",
+        'cool-gray': "#CBD5E1",
+        'true-gray': '#808080'       
       }
     },
   },

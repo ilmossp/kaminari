@@ -1,19 +1,40 @@
-import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 
 type tabProps = {
-    selected: boolean,
-    routeName: string,
-    path: JSX.Element
+  title: string;
+  route: string;
+  icon: JSX.Element;
+};
+
+function Tab({ title, icon, route }: tabProps) {
+  const router = useRouter();
+
+  return (
+    <Link href={route}>
+      <a
+        className={`flex justify-center items-center flex-col h-full relative drop-shadow-md ${
+          router.asPath === route
+            ? "text-sm font-bold text-cool-gray"
+            : "text-sm font-bold text-true-gray"
+        } `}
+      >
+        <svg
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          width="24"
+        >
+          {icon}
+        </svg>
+        <p>{title}</p>
+        {router.asPath === route && (
+          <div className="bg-cool-gray w-9 h-0.5 rounded-md absolute bottom-0"></div>
+        )}
+      </a>
+    </Link>
+  );
 }
 
-function Tab({selected,routeName,path}:tabProps) {
-  return   <div className="flex justify-center items-center flex-col h-full relative drop-shadow-md">
-  <svg className={selected ? "fill-coolGray" : "fill-trueGray"} xmlns="http://www.w3.org/2000/svg" height="24" width="24">
-    {path}
-  </svg>
-  <p className={selected ? "text-sm font-bold text-coolGray" : "text-sm font-bold text-trueGray"}>{routeName}</p>
-  <div className={selected ? "bg-coolGray w-9 h-0.5 rounded-md absolute bottom-0" : "hidden"}></div>
-</div>
-}
-
-export default Tab
+export default Tab;

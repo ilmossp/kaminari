@@ -1,15 +1,14 @@
-import React from "react";
 import Header from "./header";
 import BottomNavbar from "../components/bottom-navbar";
 
 
-type LayoutProps={child:JSX.Element,routeName:string}
+type LayoutProps={title:string}
 
-function Layout({child,routeName}:LayoutProps) {
+function Layout({title,children}:PropsWithChildren<LayoutProps>) {
   return (
-    <div className="w-full relative">
-      <Header routeName={routeName} />
-      <main>{child}</main>
+    <div className="w-full  bg-blue-gray h-full ">
+      <Header title={title} />
+      <main>{children}</main>
       <BottomNavbar />
     </div>
   );

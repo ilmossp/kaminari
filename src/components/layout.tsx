@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import Header from "./header";
 import BottomNavbar from "../components/bottom-navbar";
 
